@@ -1,0 +1,16 @@
+ 
+// Workflow of studentfome & travel Event
+
+
+e_mai = input.Email;
+t_event = input.SubForm.Travel_Event;
+s_date = input.SubForm.Start_Date;
+e_date = input.SubForm.End_Date;
+travelmap = Map();
+travelmap.put("Travel_Event_Name",t_event);
+travelmap.put("Email",e_mai);
+travelmap.put("Start_Date",s_date.toString());
+travelmap.put("End_Date",e_date.toString());
+optionmap = Map();
+getrecod = zoho.creator.createRecord("saddam.hussain_targetintegration","tranning-3","Travel_Event",travelmap,optionmap,"create");
+info getrecod;
